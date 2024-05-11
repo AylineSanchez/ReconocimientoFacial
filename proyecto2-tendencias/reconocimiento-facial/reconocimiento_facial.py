@@ -3,7 +3,7 @@ import os
 import face_recognition
 
 # Ruta de las imágenes de rostros
-imageFacesPath = "C:/Users/aylinealejandrasanch/Desktop/proyecto2-tendencias/rostros"
+imageFacesPath = "C:/Users/aylinealejandrasanch/Documents/GitHub/ReconocimientoFacial/rostros"
 
 # Listas para almacenar las codificaciones de los rostros y sus nombres
 facesEncodings = []

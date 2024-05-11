@@ -2,7 +2,7 @@ import cv2
 import os
 
 # Ruta de las imágenes de entrada
-imagesPath = "C:/Users/aylinealejandrasanch/Desktop/proyecto2-tendencias/reconocimiento-facial/imagenes/input"
+imagesPath = "C:/Users/aylinealejandrasanch/Documents/GitHub/ReconocimientoFacial/proyecto2-tendencias/reconocimiento-facial/imagenes/input"
 
 # Comprobamos si la carpeta "rostros" existe, si no, la creamos
 if not os.path.exists("rostros"):
