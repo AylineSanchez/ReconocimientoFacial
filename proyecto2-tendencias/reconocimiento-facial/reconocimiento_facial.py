@@ -84,6 +84,7 @@ def update_frame():
 
 # Función para abrir la interfaz anterior
 def abrir_interfaz_anterior():
+    cargar_imagenes_iniciales()
     subprocess.Popen(["python", "C:/Users/aylinealejandrasanch/Documents/GitHub/ReconocimientoFacial/proyecto2-tendencias/reconocimiento-facial/imagenes/extractor_rostros.py"], shell=True)
 
 # Cargar las imágenes de rostros al inicio
