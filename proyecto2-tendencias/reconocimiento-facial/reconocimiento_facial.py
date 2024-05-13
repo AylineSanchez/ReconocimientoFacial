@@ -6,7 +6,7 @@ import face_recognition
 import subprocess
 
 # Ruta de las imágenes de rostros
-imageFacesPath = "C:/Users/Juan/Documents/GitHub/ReconocimientoFacial/rostros"
+imageFacesPath = "/home/quezandoc/Documents/GitHub/ReconocimientoFacial/rostros"
 
 # Lista para almacenar las codificaciones de los rostros conocidos
 known_faces_encodings = []
@@ -23,10 +23,10 @@ def cargar_imagenes_iniciales():
         # Cargar la imagen y convertirla de BGR a RGB
         image = cv2.imread(os.path.join(imageFacesPath, file_name))
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        
+
         # Calcular la codificación facial para la imagen
         f_coding = face_recognition.face_encodings(image, known_face_locations=[(0, 150, 150, 0)])[0]
-        
+
         # Agregar la codificación a la lista de codificaciones de rostros conocidos
         known_faces_encodings.append(f_coding)
 
@@ -84,8 +84,10 @@ def update_frame():
 
 # Función para abrir la interfaz anterior
 def abrir_interfaz_anterior():
-    cargar_imagenes_iniciales()
-    subprocess.Popen(["python", "C:/Users/Juan/Documents/GitHub/ReconocimientoFacial/proyecto2-tendencias/reconocimiento-facial/imagenes/extractor_rostros.py"], shell=True)
+    subprocess.Popen(["python", "/home/quezandoc/Documents/GitHub/ReconocimientoFacial/proyecto2-tendencias/reconocimiento-facial/imagenes/extractor_rostros.py"], shell=True)
+
+
+
 
 # Cargar las imágenes de rostros al inicio
 cargar_imagenes_iniciales()
@@ -101,6 +103,12 @@ label.pack()
 # Botón para abrir la interfaz anterior
 abrir_button = tk.Button(root, text="Abrir Interfaz Anterior", command=abrir_interfaz_anterior)
 abrir_button.pack(pady=10)
+
+def refresh():
+    cargar_imagenes_iniciales()
+
+refresh_button = tk.Button(root, text="refresh", command=refresh)
+refresh_button.pack(pady=10)
 
 # Ocultar la ventana principal
 root.iconify()

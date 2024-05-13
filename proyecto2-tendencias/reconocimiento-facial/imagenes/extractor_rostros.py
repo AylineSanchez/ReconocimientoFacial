@@ -72,7 +72,7 @@ root.title("Detector de rostros")
 
 # Botón para cargar una imagen desde el sistema de archivos
 cargar_button = tk.Button(root, text="Cargar Imagen", command=cargar_imagen)
-cargar_button.pack(pady=10)
+cargar_button.pack(pady=10, padx=10)
 
 # Mantener la ventana abierta
 root.mainloop()
