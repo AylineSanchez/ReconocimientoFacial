@@ -6,7 +6,7 @@ import face_recognition
 import subprocess
 
 # Ruta de las imágenes de rostros
-imageFacesPath = "C:/Users/aylinealejandrasanch/Documents/GitHub/ReconocimientoFacial/rostros"
+imageFacesPath = "C:/Users/Juan/Documents/GitHub/ReconocimientoFacial/rostros"
 
 # Lista para almacenar las codificaciones de los rostros conocidos
 known_faces_encodings = []
@@ -85,7 +85,7 @@ def update_frame():
 # Función para abrir la interfaz anterior
 def abrir_interfaz_anterior():
     cargar_imagenes_iniciales()
-    subprocess.Popen(["python", "C:/Users/aylinealejandrasanch/Documents/GitHub/ReconocimientoFacial/proyecto2-tendencias/reconocimiento-facial/imagenes/extractor_rostros.py"], shell=True)
+    subprocess.Popen(["python", "C:/Users/Juan/Documents/GitHub/ReconocimientoFacial/proyecto2-tendencias/reconocimiento-facial/imagenes/extractor_rostros.py"], shell=True)
 
 # Cargar las imágenes de rostros al inicio
 cargar_imagenes_iniciales()
